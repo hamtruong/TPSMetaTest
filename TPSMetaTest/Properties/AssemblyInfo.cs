@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TPSMetaTest")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Unpublished work © 2016 Yen NQ")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
