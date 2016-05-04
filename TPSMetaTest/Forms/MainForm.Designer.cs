@@ -32,6 +32,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctlBtnOpen = new System.Windows.Forms.Button();
             this.ctlBtnNew = new System.Windows.Forms.Button();
+            this.dialogOpenProtocol = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.ctlBtnOpen.TabIndex = 1;
             this.ctlBtnOpen.Text = "Open..";
             this.ctlBtnOpen.UseVisualStyleBackColor = true;
+            this.ctlBtnOpen.Click += new System.EventHandler(this.ctlBtnOpen_Click);
             // 
             // ctlBtnNew
             // 
@@ -71,6 +73,11 @@
             this.ctlBtnNew.TabIndex = 1;
             this.ctlBtnNew.Text = "New..";
             this.ctlBtnNew.UseVisualStyleBackColor = true;
+            // 
+            // dialogOpenProtocol
+            // 
+            this.dialogOpenProtocol.Filter = "Protocol file|*.tpsprotocol";
+            this.dialogOpenProtocol.Title = "Open a protocol..";
             // 
             // MainForm
             // 
@@ -98,6 +105,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button ctlBtnOpen;
         private System.Windows.Forms.Button ctlBtnNew;
+        private System.Windows.Forms.OpenFileDialog dialogOpenProtocol;
     }
 }
 

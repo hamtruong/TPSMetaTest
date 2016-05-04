@@ -1,7 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TPSMetaTest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FILE_EXTENSION" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tpsprotocol</Value>
+    </Setting>
+    <Setting Name="SEG_DEFAULT_COLOR" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">MediumTurquoise</Value>
+    </Setting>
+    <Setting Name="SEG_HOVER_COLOR" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">Yellow</Value>
+    </Setting>
+    <Setting Name="SEG_CLICK_COLOR" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">CornflowerBlue</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

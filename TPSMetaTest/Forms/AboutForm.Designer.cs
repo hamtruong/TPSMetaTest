@@ -90,20 +90,22 @@
             this.ctlLinklblEmail.AutoSize = true;
             this.ctlLinklblEmail.Location = new System.Drawing.Point(87, 66);
             this.ctlLinklblEmail.Name = "ctlLinklblEmail";
-            this.ctlLinklblEmail.Size = new System.Drawing.Size(131, 12);
+            this.ctlLinklblEmail.Size = new System.Drawing.Size(118, 12);
             this.ctlLinklblEmail.TabIndex = 3;
             this.ctlLinklblEmail.TabStop = true;
-            this.ctlLinklblEmail.Text = "(quangyendn@gmail.com)";
+            this.ctlLinklblEmail.Text = "(quangyendn at gmail)";
+            this.ctlLinklblEmail.Click += new System.EventHandler(this.ctlLinklblEmail_Click);
             // 
             // ctlLinklblLink
             // 
             this.ctlLinklblLink.AutoSize = true;
             this.ctlLinklblLink.Location = new System.Drawing.Point(36, 85);
             this.ctlLinklblLink.Name = "ctlLinklblLink";
-            this.ctlLinklblLink.Size = new System.Drawing.Size(233, 12);
+            this.ctlLinklblLink.Size = new System.Drawing.Size(193, 12);
             this.ctlLinklblLink.TabIndex = 5;
             this.ctlLinklblLink.TabStop = true;
-            this.ctlLinklblLink.Text = "https://github.com/hamtruong/TPSMetaTest";
+            this.ctlLinklblLink.Text = "github.com/hamtruong/TPSMetaTest";
+            this.ctlLinklblLink.Click += new System.EventHandler(this.ctlLinklblLink_Click);
             // 
             // ctlLblLink
             // 
@@ -167,7 +169,6 @@
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "About TPSMetatTest";
             this.ctlTableView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ctlPictureBox)).EndInit();

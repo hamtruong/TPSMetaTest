@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <!-- General information of this protocol -->
+  <metainfo>
+    <name></name>
+    <len></len>
+    <type></type>
+    <create_pc></create_pc>
+    <create_date></create_date>
+    <access_date></access_date>
+  </metainfo>
+  
+  <!-- Protocol definitions -->
+  <protocol>
+    <seg len="1" type="ASCII" name="ETX" fixed="1" comment=""/>
+    
+  </protocol>
+  
+  <!-- Test data definitions -->
+  <testdata>
+    <data></data>
+    <data></data>
+    <data></data>
+  </testdata>
+</root>

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Reflection;
 using TPSMetaTest.Properties;
 using TPSMetaTest.Forms;
 
@@ -36,6 +29,20 @@ namespace TPSMetaTest
             {
                 ab.StartPosition = FormStartPosition.CenterParent;
                 ab.ShowDialog();
+            }
+        }
+
+        private void ctlBtnOpen_Click(object sender, EventArgs e)
+        {
+            dialogOpenProtocol.Filter = "Protocol file|*." + Settings.Default.FILE_EXTENSION;
+            if (dialogOpenProtocol.ShowDialog() == DialogResult.OK)
+            {
+                using (ProtocolViewForm pvform = new ProtocolViewForm())
+                {
+                    pvform.StartPosition = FormStartPosition.CenterParent;
+                    pvform.WindowState = FormWindowState.Maximized;
+                    pvform.ShowDialog();
+                }
             }
         }
     }

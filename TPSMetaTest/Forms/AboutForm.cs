@@ -22,5 +22,17 @@ namespace TPSMetaTest.Forms
         {
             ctlLblVersion.Text = "Version " + Program.version;
         }
+
+        private void ctlLinklblLink_Click(object sender, EventArgs e)
+        {
+            // Navigate to Github page
+            System.Diagnostics.Process.Start("https://github.com/hamtruong/TPSMetaTest");
+        }
+
+        private void ctlLinklblEmail_Click(object sender, EventArgs e)
+        {
+            // Open default email handler
+            System.Diagnostics.Process.Start("mailto:quangyendn@gmail.com?subject=TPSMetaTest-Question");
+        }
     }
 }
