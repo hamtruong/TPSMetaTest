@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
 using TPSMetaTest.Properties;
+using TPSMetaTest.Forms;
 
 namespace TPSMetaTest
 {
@@ -26,8 +27,16 @@ namespace TPSMetaTest
         {
             this.Icon = Resources.icon;
 
-            Version ver = Assembly.GetExecutingAssembly().GetName().Version;
-            this.Text += " V" + ver.Major + "." + ver.Minor + "." + ver.Build;
+            this.Text += " V" + Program.version;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (AboutForm ab = new AboutForm())
+            {
+                ab.StartPosition = FormStartPosition.CenterParent;
+                ab.ShowDialog();
+            }
         }
     }
 }

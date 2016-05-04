@@ -13,6 +13,7 @@ namespace TPSMetaTest
         /// Create a mutex from application GUID
         /// </summary>
         static Mutex mutex = new Mutex(true, Assembly.GetExecutingAssembly().GetType().GUID.ToString());
+        public static String version;
 
         /// <summary>
         /// アプリケーションのメイン エントリ ポイントです。
@@ -22,6 +23,9 @@ namespace TPSMetaTest
         {
             if (mutex.WaitOne(TimeSpan.Zero, true))
             {
+                Version ver =  Assembly.GetExecutingAssembly().GetName().Version;
+                version = ver.Major + "." + ver.Minor + "." + ver.Build;
+
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm());

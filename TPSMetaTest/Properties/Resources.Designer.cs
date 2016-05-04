@@ -66,5 +66,12 @@ namespace TPSMetaTest.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap icon_png {
+            get {
+                object obj = ResourceManager.GetObject("icon_png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(62, 22);
             this.aboutToolStripMenuItem.Text = "About..";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // ctlBtnOpen
             // 
@@ -82,6 +83,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TPSMetaTest";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
