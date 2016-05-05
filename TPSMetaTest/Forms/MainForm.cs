@@ -23,6 +23,11 @@ namespace TPSMetaTest
             this.Text += " V" + Program.version;
         }
 
+        /// <summary>
+        /// Show About form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (AboutForm ab = new AboutForm())
@@ -32,6 +37,11 @@ namespace TPSMetaTest
             }
         }
 
+        /// <summary>
+        /// Open button clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ctlBtnOpen_Click(object sender, EventArgs e)
         {
             dialogOpenProtocol.Filter = "Protocol file|*." + Settings.Default.FILE_EXTENSION;
@@ -41,6 +51,19 @@ namespace TPSMetaTest
                 {
                     pvform.ShowDialog();
                 }
+            }
+        }
+
+        /// <summary>
+        /// New protocol button clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ctlBtnNew_Click(object sender, EventArgs e)
+        {
+            using (ProtocolViewForm pvform = new ProtocolViewForm())
+            {
+                pvform.ShowDialog();
             }
         }
     }

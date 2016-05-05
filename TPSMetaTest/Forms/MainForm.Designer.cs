@@ -73,6 +73,7 @@
             this.ctlBtnNew.TabIndex = 1;
             this.ctlBtnNew.Text = "New..";
             this.ctlBtnNew.UseVisualStyleBackColor = true;
+            this.ctlBtnNew.Click += new System.EventHandler(this.ctlBtnNew_Click);
             // 
             // dialogOpenProtocol
             // 

@@ -7,20 +7,21 @@ namespace TPSMetaTest.Components
 {
     class SegmentLabel:Label
     {
-        public Segment DataSegment { get; set; }
-        public bool Selected { get; set; }
+        private string mId;
 
-        public SegmentLabel()
+        public event EventHandler OnSelected;
+
+        public SegmentLabel() : this(null)
         {
-            InitializeComponent();
-            this.Selected = false;
         }
 
         public SegmentLabel(Segment segment)
         {
-            this.DataSegment = segment;
             InitializeComponent();
-            this.Selected = false;
+
+            this.DataSegment = segment;
+            this.IsSelected = false;
+            mId = Guid.NewGuid().ToString("N");
         }
 
         private void InitializeComponent()
@@ -36,12 +37,24 @@ namespace TPSMetaTest.Components
             this.ResumeLayout(false);
 
         }
+        
+        #region "Properties"
+
+        public Segment DataSegment { get; set; }
+        
+        public String ID
+        {
+            get
+            {
+                return mId;
+            }
+        }
 
         protected override System.Drawing.Size DefaultSize
         {
             get
             {
-                return new System.Drawing.Size(200, 52);
+                return new System.Drawing.Size(250, 20);
             }
         }
 
@@ -49,9 +62,9 @@ namespace TPSMetaTest.Components
         {
             get
             {
-                return "[" + this.DataSegment.Length + "] " + this.DataSegment.Name
-                    + Environment.NewLine + this.DataSegment.Type.ToString()
-                    + Environment.NewLine + "\"123456\"";
+                return "[" + this.DataSegment.Length + "] ("
+                    + this.DataSegment.Type.ToString() + ") "
+                    + this.DataSegment.Name.Substring(0, Math.Min(this.DataSegment.Name.Length, 20));
             }
 
             set
@@ -60,11 +73,15 @@ namespace TPSMetaTest.Components
             }
         }
 
+        #endregion
+
+        #region "Event handler"
+
         protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
 
-            if (this.Selected == false)
+            if (this.IsSelected == false)
             {
                 this.BackColor = Settings.Default.SEG_HOVER_COLOR;
             }
@@ -74,7 +91,7 @@ namespace TPSMetaTest.Components
         {
             base.OnMouseLeave(e);
 
-            if (this.Selected == false)
+            if (this.IsSelected == false)
             {
                 this.BackColor = Settings.Default.SEG_DEFAULT_COLOR;
             }
@@ -84,16 +101,51 @@ namespace TPSMetaTest.Components
         {
             base.OnMouseClick(e);
 
-            this.Selected = !this.Selected;
+            this.IsSelected = !this.IsSelected;
 
-            if (this.Selected)
+            if (!this.IsSelected)
             {
-                this.BackColor = Settings.Default.SEG_CLICK_COLOR;
+                this.BackColor = Settings.Default.SEG_HOVER_COLOR; 
             }
             else
             {
-                this.BackColor = Settings.Default.SEG_HOVER_COLOR;
+                this.BackColor = Settings.Default.SEG_CLICK_COLOR;
             }
         }
+
+        private bool mIsSelected = false;
+        public bool IsSelected
+        {
+            get
+            {
+                return mIsSelected;
+            }
+            set
+            {
+                if (mIsSelected != value)
+                {
+                    mIsSelected = value;
+
+                    if (mIsSelected)
+                    {
+                        this.BackColor = Settings.Default.SEG_CLICK_COLOR;
+                    }
+                    else
+                    {
+                        this.BackColor = Settings.Default.SEG_DEFAULT_COLOR;
+                    }
+
+                    //Call select changed event
+                    if (mIsSelected && OnSelected != null)
+                    {
+                        OnSelected(this, new EventArgs());
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TPSMetaTest.Components;
 
 namespace TPSMetaTest.Data
@@ -19,6 +16,10 @@ namespace TPSMetaTest.Data
             this.Type = DataDefinition.SegType.ASCII;
         }
 
+        /// <summary>
+        /// Generate new label 
+        /// </summary>
+        /// <returns></returns>
         public SegmentLabel GetLabel()
         {
             SegmentLabel lbl = new SegmentLabel(this);
