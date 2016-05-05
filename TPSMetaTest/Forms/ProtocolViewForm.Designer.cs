@@ -33,11 +33,17 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.ctlStatusStrip = new System.Windows.Forms.StatusStrip();
-            this.ctlSplitCtn = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ctlToolStrip.SuspendLayout();
-            this.ctlSplitCtn.Panel1.SuspendLayout();
-            this.ctlSplitCtn.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ctlToolStrip
@@ -76,49 +82,97 @@
             this.ctlStatusStrip.TabIndex = 1;
             this.ctlStatusStrip.Text = "statusStrip1";
             // 
-            // ctlSplitCtn
-            // 
-            this.ctlSplitCtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlSplitCtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlSplitCtn.IsSplitterFixed = true;
-            this.ctlSplitCtn.Location = new System.Drawing.Point(0, 25);
-            this.ctlSplitCtn.Name = "ctlSplitCtn";
-            // 
-            // ctlSplitCtn.Panel1
-            // 
-            this.ctlSplitCtn.Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.ctlSplitCtn.Size = new System.Drawing.Size(1016, 735);
-            this.ctlSplitCtn.SplitterDistance = 329;
-            this.ctlSplitCtn.SplitterWidth = 2;
-            this.ctlSplitCtn.TabIndex = 2;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(327, 733);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(207, 334);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
-            this.flowLayoutPanel1.MouseEnter += new System.EventHandler(this.flowLayoutPanel1_MouseEnter);
+            this.flowLayoutPanel1.MouseEnter += new System.EventHandler(this.flowLayoutPanel_MouseEnter);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.Controls.Add(this.tabControl1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1016, 735);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(234, 697);
+            this.flowLayoutPanel2.TabIndex = 1;
+            this.flowLayoutPanel2.WrapContents = false;
+            this.flowLayoutPanel2.MouseEnter += new System.EventHandler(this.flowLayoutPanel_MouseEnter);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(248, 729);
+            this.tabControl1.TabIndex = 3;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.flowLayoutPanel1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(213, 340);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Request";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.flowLayoutPanel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(240, 703);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Response";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // ProtocolViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 782);
-            this.Controls.Add(this.ctlSplitCtn);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ctlStatusStrip);
             this.Controls.Add(this.ctlToolStrip);
             this.Name = "ProtocolViewForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProtocolViewForm";
+            this.Shown += new System.EventHandler(this.ProtocolViewForm_Shown);
             this.ctlToolStrip.ResumeLayout(false);
             this.ctlToolStrip.PerformLayout();
-            this.ctlSplitCtn.Panel1.ResumeLayout(false);
-            this.ctlSplitCtn.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,7 +184,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.StatusStrip ctlStatusStrip;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.SplitContainer ctlSplitCtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

@@ -39,8 +39,6 @@ namespace TPSMetaTest
             {
                 using (ProtocolViewForm pvform = new ProtocolViewForm())
                 {
-                    pvform.StartPosition = FormStartPosition.CenterParent;
-                    pvform.WindowState = FormWindowState.Maximized;
                     pvform.ShowDialog();
                 }
             }
