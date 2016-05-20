@@ -22,6 +22,11 @@ namespace TPSMetaTest
 
             mEditingProtocol = new Protocol();
         }
+
+        private void UpdateButtons()
+        {
+
+        }
         
         /// <summary>
         /// Focus on layout panel on mouse enter in order to activate mouse wheel
@@ -52,27 +57,23 @@ namespace TPSMetaTest
         /// <param name="e"></param>
         private void ctlBtnAdd_Click(object sender, System.EventArgs e)
         {
-            Segment seg = new Segment();
+            SegmentLabel lbl = new SegmentLabel();
 
             if (ctlTabProtocol.SelectedIndex == 0)
             {
-                seg.Name = "Request dat " + mEditingProtocol.ReqSegments.Count;
-
-                SegmentLabel lbl = seg.GetLabel();
+                lbl.DataSegment.Name = "Request dat " + mEditingProtocol.ReqSegments.Count;
                 lbl.OnSelected += new EventHandler(OnReqLabelSelectChanged);
 
                 ctlPanelRequest.Controls.Add(lbl);
-                mEditingProtocol.ReqSegments.Add(seg);
+                mEditingProtocol.ReqSegments.Add(lbl.DataSegment);
             }
             else
             {
-                seg.Name = "Response dat " + mEditingProtocol.RepSegments.Count;
-
-                SegmentLabel lbl = seg.GetLabel();
+                lbl.DataSegment.Name = "Response dat " + mEditingProtocol.RepSegments.Count;
                 lbl.OnSelected += new EventHandler(OnRepLabelSelectChanged);
 
                 ctlPanelResponse.Controls.Add(lbl);
-                mEditingProtocol.RepSegments.Add(seg);
+                mEditingProtocol.RepSegments.Add(lbl.DataSegment);
             }
         }
 
@@ -111,5 +112,8 @@ namespace TPSMetaTest
                 }
             }
         }
+
+        private SegmentLabel SelectedReqLabel { get; set; }
+        private SegmentLabel SelectedRepLabel { get; set; }
     }
 }

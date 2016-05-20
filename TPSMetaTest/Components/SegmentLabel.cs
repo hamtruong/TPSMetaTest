@@ -11,17 +11,15 @@ namespace TPSMetaTest.Components
 
         public event EventHandler OnSelected;
 
-        public SegmentLabel() : this(null)
-        {
-        }
-
-        public SegmentLabel(Segment segment)
+        public SegmentLabel()
         {
             InitializeComponent();
 
-            this.DataSegment = segment;
+            this.DataSegment = new Segment();
             this.IsSelected = false;
-            mId = Guid.NewGuid().ToString("N");
+            this.mId = Guid.NewGuid().ToString("N");
+
+            this.DataBindings.Add(new Binding("Text", this.DataSegment, "LabelText"));
         }
 
         private void InitializeComponent()
@@ -31,6 +29,7 @@ namespace TPSMetaTest.Components
             // SegmentLabel
             // 
             this.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Padding = new System.Windows.Forms.Padding(2);
@@ -58,20 +57,20 @@ namespace TPSMetaTest.Components
             }
         }
 
-        public override string Text
-        {
-            get
-            {
-                return "[" + this.DataSegment.Length + "] ("
-                    + this.DataSegment.Type.ToString() + ") "
-                    + this.DataSegment.Name.Substring(0, Math.Min(this.DataSegment.Name.Length, 20));
-            }
+        //public override string Text
+        //{
+        //    get
+        //    {
+        //        return "[" + this.DataSegment.Length + "] ("
+        //            + this.DataSegment.Type.ToString() + ") "
+        //            + this.DataSegment.Name.Substring(0, Math.Min(this.DataSegment.Name.Length, 20));
+        //    }
 
-            set
-            {
-                ;
-            }
-        }
+        //    set
+        //    {
+        //        ;
+        //    }
+        //}
 
         #endregion
 
