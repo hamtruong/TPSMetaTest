@@ -3,6 +3,7 @@ using TPSMetaTest.Properties;
 using TPSMetaTest.Data;
 using TPSMetaTest.Components;
 using System;
+using TPSMetaTest.Controls;
 
 namespace TPSMetaTest
 {
@@ -46,8 +47,8 @@ namespace TPSMetaTest
         /// <param name="e"></param>
         private void ProtocolViewForm_Shown(object sender, System.EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
-            Refresh();
+            //WindowState = FormWindowState.Maximized;
+            //Refresh();
         }
 
         /// <summary>
@@ -57,24 +58,27 @@ namespace TPSMetaTest
         /// <param name="e"></param>
         private void ctlBtnAdd_Click(object sender, System.EventArgs e)
         {
-            SegmentLabel lbl = new SegmentLabel();
+            SegmentControl segment = new SegmentControl();
+            var panel = (sender.Equals(ctlBtnAdd1) ? ctlPanelRequest : ctlPanelResponse);
+            panel.Controls.Add(segment);
 
-            if (ctlTabProtocol.SelectedIndex == 0)
-            {
-                lbl.DataSegment.Name = "Request dat " + mEditingProtocol.ReqSegments.Count;
-                lbl.OnSelected += new EventHandler(OnReqLabelSelectChanged);
 
-                ctlPanelRequest.Controls.Add(lbl);
-                mEditingProtocol.ReqSegments.Add(lbl.DataSegment);
-            }
-            else
-            {
-                lbl.DataSegment.Name = "Response dat " + mEditingProtocol.RepSegments.Count;
-                lbl.OnSelected += new EventHandler(OnRepLabelSelectChanged);
+            //if (ctlTabProtocol.SelectedIndex == 0)
+            //{
+            //    lbl.DataSegment.Name = "Request dat " + mEditingProtocol.ReqSegments.Count;
+            //    lbl.OnSelected += new EventHandler(OnReqLabelSelectChanged);
 
-                ctlPanelResponse.Controls.Add(lbl);
-                mEditingProtocol.RepSegments.Add(lbl.DataSegment);
-            }
+            //    ctlPanelRequest.Controls.Add(lbl);
+            //    mEditingProtocol.ReqSegments.Add(lbl.DataSegment);
+            //}
+            //else
+            //{
+            //    lbl.DataSegment.Name = "Response dat " + mEditingProtocol.RepSegments.Count;
+            //    lbl.OnSelected += new EventHandler(OnRepLabelSelectChanged);
+
+            //    ctlPanelResponse.Controls.Add(lbl);
+            //    mEditingProtocol.RepSegments.Add(lbl.DataSegment);
+            //}
         }
 
         /// <summary>
@@ -102,15 +106,15 @@ namespace TPSMetaTest
         /// <param name="e"></param>
         private void OnRepLabelSelectChanged(object sender, System.EventArgs e)
         {
-            SegmentLabel lbl = (SegmentLabel)sender;
-            foreach (var c in ctlPanelResponse.Controls)
-            {
-                SegmentLabel l = (SegmentLabel)c;
-                if (l.IsSelected && !l.ID.Equals(lbl.ID))
-                {
-                    l.IsSelected = false;
-                }
-            }
+            //SegmentLabel lbl = (SegmentLabel)sender;
+            //foreach (var c in ctlPanelResponse.Controls)
+            //{
+            //    SegmentLabel l = (SegmentLabel)c;
+            //    if (l.IsSelected && !l.ID.Equals(lbl.ID))
+            //    {
+            //        l.IsSelected = false;
+            //    }
+            //}
         }
 
         private SegmentLabel SelectedReqLabel { get; set; }

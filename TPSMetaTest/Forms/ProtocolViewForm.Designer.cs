@@ -35,25 +35,27 @@
             this.ctlStatusStrip = new System.Windows.Forms.StatusStrip();
             this.ctlPanelRequest = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ctlTabProtocol = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ctlPanelResponse = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ctlBtnClear = new System.Windows.Forms.Button();
-            this.ctlBtnRemove = new System.Windows.Forms.Button();
-            this.ctlBtnDown = new System.Windows.Forms.Button();
-            this.ctlBtnUp = new System.Windows.Forms.Button();
-            this.ctlBtnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.ctlBtnAdd1 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnRemove1 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnUp1 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnDown1 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnClear1 = new System.Windows.Forms.ToolStripButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ctlPanelResponse = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.ctlBtnAdd2 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnRemove2 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnUp2 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnDown2 = new System.Windows.Forms.ToolStripButton();
+            this.ctlBtnClear2 = new System.Windows.Forms.ToolStripButton();
             this.ctlToolStrip.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.ctlTabProtocol.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ctlToolStrip
@@ -97,10 +99,10 @@
             this.ctlPanelRequest.AutoScroll = true;
             this.ctlPanelRequest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlPanelRequest.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.ctlPanelRequest.Location = new System.Drawing.Point(3, 3);
+            this.ctlPanelRequest.Location = new System.Drawing.Point(0, 0);
             this.ctlPanelRequest.Name = "ctlPanelRequest";
             this.ctlPanelRequest.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.ctlPanelRequest.Size = new System.Drawing.Size(234, 697);
+            this.ctlPanelRequest.Size = new System.Drawing.Size(497, 694);
             this.ctlPanelRequest.TabIndex = 0;
             this.ctlPanelRequest.WrapContents = false;
             this.ctlPanelRequest.MouseEnter += new System.EventHandler(this.flowLayoutPanel_MouseEnter);
@@ -108,157 +110,175 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Controls.Add(this.ctlTabProtocol, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1016, 735);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // ctlTabProtocol
+            // panel1
             // 
-            this.ctlTabProtocol.Controls.Add(this.tabPage1);
-            this.ctlTabProtocol.Controls.Add(this.tabPage2);
-            this.ctlTabProtocol.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlTabProtocol.Location = new System.Drawing.Point(3, 3);
-            this.ctlTabProtocol.Name = "ctlTabProtocol";
-            this.ctlTabProtocol.SelectedIndex = 0;
-            this.ctlTabProtocol.Size = new System.Drawing.Size(248, 729);
-            this.ctlTabProtocol.TabIndex = 3;
+            this.panel1.Controls.Add(this.ctlPanelRequest);
+            this.panel1.Controls.Add(this.toolStrip1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(497, 719);
+            this.panel1.TabIndex = 1;
             // 
-            // tabPage1
+            // toolStrip1
             // 
-            this.tabPage1.Controls.Add(this.ctlPanelRequest);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(240, 703);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Request";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ctlBtnAdd1,
+            this.ctlBtnRemove1,
+            this.ctlBtnUp1,
+            this.ctlBtnDown1,
+            this.ctlBtnClear1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 694);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(497, 25);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // tabPage2
+            // ctlBtnAdd1
             // 
-            this.tabPage2.Controls.Add(this.ctlPanelResponse);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(240, 703);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Response";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ctlBtnAdd1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnAdd1.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnAdd1.Image")));
+            this.ctlBtnAdd1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnAdd1.Name = "ctlBtnAdd1";
+            this.ctlBtnAdd1.Size = new System.Drawing.Size(23, 22);
+            this.ctlBtnAdd1.Text = "+";
+            this.ctlBtnAdd1.Click += new System.EventHandler(this.ctlBtnAdd_Click);
+            // 
+            // ctlBtnRemove1
+            // 
+            this.ctlBtnRemove1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnRemove1.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnRemove1.Image")));
+            this.ctlBtnRemove1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnRemove1.Name = "ctlBtnRemove1";
+            this.ctlBtnRemove1.Size = new System.Drawing.Size(23, 22);
+            this.ctlBtnRemove1.Text = "-";
+            // 
+            // ctlBtnUp1
+            // 
+            this.ctlBtnUp1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnUp1.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnUp1.Image")));
+            this.ctlBtnUp1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnUp1.Name = "ctlBtnUp1";
+            this.ctlBtnUp1.Size = new System.Drawing.Size(24, 22);
+            this.ctlBtnUp1.Text = "↑";
+            // 
+            // ctlBtnDown1
+            // 
+            this.ctlBtnDown1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnDown1.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnDown1.Image")));
+            this.ctlBtnDown1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnDown1.Name = "ctlBtnDown1";
+            this.ctlBtnDown1.Size = new System.Drawing.Size(24, 22);
+            this.ctlBtnDown1.Text = "↓";
+            // 
+            // ctlBtnClear1
+            // 
+            this.ctlBtnClear1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnClear1.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnClear1.Image")));
+            this.ctlBtnClear1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnClear1.Name = "ctlBtnClear1";
+            this.ctlBtnClear1.Size = new System.Drawing.Size(42, 22);
+            this.ctlBtnClear1.Text = "Clear";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ctlPanelResponse);
+            this.panel2.Controls.Add(this.toolStrip2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(511, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(497, 719);
+            this.panel2.TabIndex = 2;
             // 
             // ctlPanelResponse
             // 
             this.ctlPanelResponse.AutoScroll = true;
             this.ctlPanelResponse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlPanelResponse.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.ctlPanelResponse.Location = new System.Drawing.Point(3, 3);
+            this.ctlPanelResponse.Location = new System.Drawing.Point(0, 0);
             this.ctlPanelResponse.Name = "ctlPanelResponse";
             this.ctlPanelResponse.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.ctlPanelResponse.Size = new System.Drawing.Size(234, 697);
+            this.ctlPanelResponse.Size = new System.Drawing.Size(497, 694);
             this.ctlPanelResponse.TabIndex = 1;
             this.ctlPanelResponse.WrapContents = false;
             this.ctlPanelResponse.MouseEnter += new System.EventHandler(this.flowLayoutPanel_MouseEnter);
             // 
-            // panel1
+            // toolStrip2
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.ctlBtnClear);
-            this.panel1.Controls.Add(this.ctlBtnRemove);
-            this.panel1.Controls.Add(this.ctlBtnDown);
-            this.panel1.Controls.Add(this.ctlBtnUp);
-            this.panel1.Controls.Add(this.ctlBtnAdd);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(257, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(756, 729);
-            this.panel1.TabIndex = 4;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ctlBtnAdd2,
+            this.ctlBtnRemove2,
+            this.ctlBtnUp2,
+            this.ctlBtnDown2,
+            this.ctlBtnClear2});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 694);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(497, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
             // 
-            // ctlBtnClear
+            // ctlBtnAdd2
             // 
-            this.ctlBtnClear.Enabled = false;
-            this.ctlBtnClear.Location = new System.Drawing.Point(3, 182);
-            this.ctlBtnClear.Name = "ctlBtnClear";
-            this.ctlBtnClear.Size = new System.Drawing.Size(60, 22);
-            this.ctlBtnClear.TabIndex = 0;
-            this.ctlBtnClear.Text = "Clear";
-            this.ctlBtnClear.UseVisualStyleBackColor = true;
+            this.ctlBtnAdd2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnAdd2.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnAdd2.Image")));
+            this.ctlBtnAdd2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnAdd2.Name = "ctlBtnAdd2";
+            this.ctlBtnAdd2.Size = new System.Drawing.Size(23, 22);
+            this.ctlBtnAdd2.Text = "+";
+            this.ctlBtnAdd2.Click += new System.EventHandler(this.ctlBtnAdd_Click);
             // 
-            // ctlBtnRemove
+            // ctlBtnRemove2
             // 
-            this.ctlBtnRemove.Enabled = false;
-            this.ctlBtnRemove.Location = new System.Drawing.Point(3, 132);
-            this.ctlBtnRemove.Name = "ctlBtnRemove";
-            this.ctlBtnRemove.Size = new System.Drawing.Size(60, 33);
-            this.ctlBtnRemove.TabIndex = 0;
-            this.ctlBtnRemove.Text = "Remove";
-            this.ctlBtnRemove.UseVisualStyleBackColor = true;
+            this.ctlBtnRemove2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnRemove2.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnRemove2.Image")));
+            this.ctlBtnRemove2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnRemove2.Name = "ctlBtnRemove2";
+            this.ctlBtnRemove2.Size = new System.Drawing.Size(23, 22);
+            this.ctlBtnRemove2.Text = "-";
             // 
-            // ctlBtnDown
+            // ctlBtnUp2
             // 
-            this.ctlBtnDown.Enabled = false;
-            this.ctlBtnDown.Location = new System.Drawing.Point(3, 89);
-            this.ctlBtnDown.Name = "ctlBtnDown";
-            this.ctlBtnDown.Size = new System.Drawing.Size(60, 33);
-            this.ctlBtnDown.TabIndex = 0;
-            this.ctlBtnDown.Text = "Down";
-            this.ctlBtnDown.UseVisualStyleBackColor = true;
+            this.ctlBtnUp2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnUp2.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnUp2.Image")));
+            this.ctlBtnUp2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnUp2.Name = "ctlBtnUp2";
+            this.ctlBtnUp2.Size = new System.Drawing.Size(24, 22);
+            this.ctlBtnUp2.Text = "↑";
             // 
-            // ctlBtnUp
+            // ctlBtnDown2
             // 
-            this.ctlBtnUp.Enabled = false;
-            this.ctlBtnUp.Location = new System.Drawing.Point(3, 46);
-            this.ctlBtnUp.Name = "ctlBtnUp";
-            this.ctlBtnUp.Size = new System.Drawing.Size(60, 33);
-            this.ctlBtnUp.TabIndex = 0;
-            this.ctlBtnUp.Text = "Up";
-            this.ctlBtnUp.UseVisualStyleBackColor = true;
+            this.ctlBtnDown2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnDown2.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnDown2.Image")));
+            this.ctlBtnDown2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnDown2.Name = "ctlBtnDown2";
+            this.ctlBtnDown2.Size = new System.Drawing.Size(24, 22);
+            this.ctlBtnDown2.Text = "↓";
             // 
-            // ctlBtnAdd
+            // ctlBtnClear2
             // 
-            this.ctlBtnAdd.Location = new System.Drawing.Point(3, 3);
-            this.ctlBtnAdd.Name = "ctlBtnAdd";
-            this.ctlBtnAdd.Size = new System.Drawing.Size(60, 33);
-            this.ctlBtnAdd.TabIndex = 0;
-            this.ctlBtnAdd.Text = "Add";
-            this.ctlBtnAdd.UseVisualStyleBackColor = true;
-            this.ctlBtnAdd.Click += new System.EventHandler(this.ctlBtnAdd_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Data Type";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Length";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 12);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Index";
+            this.ctlBtnClear2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.ctlBtnClear2.Image = ((System.Drawing.Image)(resources.GetObject("ctlBtnClear2.Image")));
+            this.ctlBtnClear2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ctlBtnClear2.Name = "ctlBtnClear2";
+            this.ctlBtnClear2.Size = new System.Drawing.Size(42, 22);
+            this.ctlBtnClear2.Text = "Clear";
             // 
             // ProtocolViewForm
             // 
@@ -275,11 +295,14 @@
             this.ctlToolStrip.ResumeLayout(false);
             this.ctlToolStrip.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.ctlTabProtocol.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,18 +316,20 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.FlowLayoutPanel ctlPanelRequest;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel ctlPanelResponse;
-        private System.Windows.Forms.TabControl ctlTabProtocol;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button ctlBtnAdd;
-        private System.Windows.Forms.Button ctlBtnRemove;
-        private System.Windows.Forms.Button ctlBtnDown;
-        private System.Windows.Forms.Button ctlBtnUp;
-        private System.Windows.Forms.Button ctlBtnClear;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel ctlPanelResponse;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton ctlBtnAdd1;
+        private System.Windows.Forms.ToolStripButton ctlBtnRemove1;
+        private System.Windows.Forms.ToolStripButton ctlBtnUp1;
+        private System.Windows.Forms.ToolStripButton ctlBtnDown1;
+        private System.Windows.Forms.ToolStripButton ctlBtnClear1;
+        private System.Windows.Forms.ToolStripButton ctlBtnAdd2;
+        private System.Windows.Forms.ToolStripButton ctlBtnRemove2;
+        private System.Windows.Forms.ToolStripButton ctlBtnUp2;
+        private System.Windows.Forms.ToolStripButton ctlBtnDown2;
+        private System.Windows.Forms.ToolStripButton ctlBtnClear2;
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="Components\SegmentLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\SegmentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SegmentControl.Designer.cs">
+      <DependentUpon>SegmentControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\DataDefinition.cs" />
     <Compile Include="Data\Protocol.cs" />
     <Compile Include="Data\Segment.cs" />
@@ -71,6 +77,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\SegmentLabel.resx">
       <DependentUpon>SegmentLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SegmentControl.resx">
+      <DependentUpon>SegmentControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
@@ -111,9 +120,6 @@
   <ItemGroup>
     <Content Include="Data\DumyProtocol.xml" />
     <Content Include="icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
