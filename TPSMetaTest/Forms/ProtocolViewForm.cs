@@ -23,11 +23,6 @@ namespace TPSMetaTest
 
             mEditingProtocol = new Protocol();
         }
-
-        private void UpdateButtons()
-        {
-
-        }
         
         /// <summary>
         /// Focus on layout panel on mouse enter in order to activate mouse wheel
@@ -58,66 +53,17 @@ namespace TPSMetaTest
         /// <param name="e"></param>
         private void ctlBtnAdd_Click(object sender, System.EventArgs e)
         {
-            SegmentControl segment = new SegmentControl();
+            SegmentControl segment = new SegmentControl(new Segment());
             var panel = (sender.Equals(ctlBtnAdd1) ? ctlPanelRequest : ctlPanelResponse);
             panel.Controls.Add(segment);
-
-
-            //if (ctlTabProtocol.SelectedIndex == 0)
-            //{
-            //    lbl.DataSegment.Name = "Request dat " + mEditingProtocol.ReqSegments.Count;
-            //    lbl.OnSelected += new EventHandler(OnReqLabelSelectChanged);
-
-            //    ctlPanelRequest.Controls.Add(lbl);
-            //    mEditingProtocol.ReqSegments.Add(lbl.DataSegment);
-            //}
-            //else
-            //{
-            //    lbl.DataSegment.Name = "Response dat " + mEditingProtocol.RepSegments.Count;
-            //    lbl.OnSelected += new EventHandler(OnRepLabelSelectChanged);
-
-            //    ctlPanelResponse.Controls.Add(lbl);
-            //    mEditingProtocol.RepSegments.Add(lbl.DataSegment);
-            //}
+            //TODO: Do other stuffs
         }
 
-        /// <summary>
-        /// When click on a segment, refresh color of other segments (Request tab)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnReqLabelSelectChanged(object sender, System.EventArgs e)
+        private void OnBtnClear_Click(object sender, EventArgs e)
         {
-            SegmentLabel lbl = (SegmentLabel)sender;
-            foreach (var c in ctlPanelRequest.Controls)
-            {
-                SegmentLabel l = (SegmentLabel)c;
-                if (l.IsSelected && !l.ID.Equals(lbl.ID))
-                {
-                    l.IsSelected = false;
-                }
-            }
+            var panel = (sender.Equals(ctlBtnClear1) ? ctlPanelRequest : ctlPanelResponse);
+            panel.Controls.Clear();
+            //TODO: Do other stuffs
         }
-
-        /// <summary>
-        /// When click on a segment, refresh color of other segments (Response tab)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnRepLabelSelectChanged(object sender, System.EventArgs e)
-        {
-            //SegmentLabel lbl = (SegmentLabel)sender;
-            //foreach (var c in ctlPanelResponse.Controls)
-            //{
-            //    SegmentLabel l = (SegmentLabel)c;
-            //    if (l.IsSelected && !l.ID.Equals(lbl.ID))
-            //    {
-            //        l.IsSelected = false;
-            //    }
-            //}
-        }
-
-        private SegmentLabel SelectedReqLabel { get; set; }
-        private SegmentLabel SelectedRepLabel { get; set; }
     }
 }

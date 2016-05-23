@@ -14,5 +14,11 @@
     <Setting Name="SEG_CLICK_COLOR" Type="System.Drawing.Color" Scope="Application">
       <Value Profile="(Default)">CornflowerBlue</Value>
     </Setting>
+    <Setting Name="SEG_HEIGHT_MINIMIZED" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">26</Value>
+    </Setting>
+    <Setting Name="SEG_HEIGHT_EXPANDED" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">78</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -58,5 +58,26 @@ namespace TPSMetaTest.Properties {
                 return ((global::System.Drawing.Color)(this["SEG_CLICK_COLOR"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("26")]
+        public int SEG_HEIGHT_MINIMIZED {
+            get {
+                return ((int)(this["SEG_HEIGHT_MINIMIZED"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("78")]
+        public int SEG_HEIGHT_EXPANDED {
+            get {
+                return ((int)(this["SEG_HEIGHT_EXPANDED"]));
+            }
+            set {
+                this["SEG_HEIGHT_EXPANDED"] = value;
+            }
+        }
     }
 }

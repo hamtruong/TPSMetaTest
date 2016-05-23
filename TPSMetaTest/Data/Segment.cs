@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace TPSMetaTest.Data
 {
-    class Segment : INotifyPropertyChanged
+    public class Segment : INotifyPropertyChanged
     {
         #region "Properties"
         private String mName;

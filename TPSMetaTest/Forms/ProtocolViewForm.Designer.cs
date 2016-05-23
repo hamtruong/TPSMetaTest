@@ -88,7 +88,7 @@
             // 
             // ctlStatusStrip
             // 
-            this.ctlStatusStrip.Location = new System.Drawing.Point(0, 760);
+            this.ctlStatusStrip.Location = new System.Drawing.Point(0, 523);
             this.ctlStatusStrip.Name = "ctlStatusStrip";
             this.ctlStatusStrip.Size = new System.Drawing.Size(1016, 22);
             this.ctlStatusStrip.TabIndex = 1;
@@ -102,7 +102,7 @@
             this.ctlPanelRequest.Location = new System.Drawing.Point(0, 0);
             this.ctlPanelRequest.Name = "ctlPanelRequest";
             this.ctlPanelRequest.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.ctlPanelRequest.Size = new System.Drawing.Size(497, 694);
+            this.ctlPanelRequest.Size = new System.Drawing.Size(497, 457);
             this.ctlPanelRequest.TabIndex = 0;
             this.ctlPanelRequest.WrapContents = false;
             this.ctlPanelRequest.MouseEnter += new System.EventHandler(this.flowLayoutPanel_MouseEnter);
@@ -120,7 +120,7 @@
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1016, 735);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1016, 498);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -130,7 +130,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(8, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(497, 719);
+            this.panel1.Size = new System.Drawing.Size(497, 482);
             this.panel1.TabIndex = 1;
             // 
             // toolStrip1
@@ -143,7 +143,7 @@
             this.ctlBtnUp1,
             this.ctlBtnDown1,
             this.ctlBtnClear1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 694);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 457);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(497, 25);
             this.toolStrip1.TabIndex = 0;
@@ -194,6 +194,7 @@
             this.ctlBtnClear1.Name = "ctlBtnClear1";
             this.ctlBtnClear1.Size = new System.Drawing.Size(42, 22);
             this.ctlBtnClear1.Text = "Clear";
+            this.ctlBtnClear1.Click += new System.EventHandler(this.OnBtnClear_Click);
             // 
             // panel2
             // 
@@ -202,7 +203,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(511, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(497, 719);
+            this.panel2.Size = new System.Drawing.Size(497, 482);
             this.panel2.TabIndex = 2;
             // 
             // ctlPanelResponse
@@ -213,7 +214,7 @@
             this.ctlPanelResponse.Location = new System.Drawing.Point(0, 0);
             this.ctlPanelResponse.Name = "ctlPanelResponse";
             this.ctlPanelResponse.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.ctlPanelResponse.Size = new System.Drawing.Size(497, 694);
+            this.ctlPanelResponse.Size = new System.Drawing.Size(497, 457);
             this.ctlPanelResponse.TabIndex = 1;
             this.ctlPanelResponse.WrapContents = false;
             this.ctlPanelResponse.MouseEnter += new System.EventHandler(this.flowLayoutPanel_MouseEnter);
@@ -228,7 +229,7 @@
             this.ctlBtnUp2,
             this.ctlBtnDown2,
             this.ctlBtnClear2});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 694);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 457);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(497, 25);
             this.toolStrip2.TabIndex = 0;
@@ -279,12 +280,13 @@
             this.ctlBtnClear2.Name = "ctlBtnClear2";
             this.ctlBtnClear2.Size = new System.Drawing.Size(42, 22);
             this.ctlBtnClear2.Text = "Clear";
+            this.ctlBtnClear2.Click += new System.EventHandler(this.OnBtnClear_Click);
             // 
             // ProtocolViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1016, 782);
+            this.ClientSize = new System.Drawing.Size(1016, 545);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ctlStatusStrip);
             this.Controls.Add(this.ctlToolStrip);
