@@ -8,7 +8,12 @@ namespace TPSMetaTest.Data
         /// </summary>
         public enum SegType
         {
-            ASCII
+            Hex,
+            Dec,
+            Oct,
+            Bin,
+            ASCII,
+            Unicode
         }
     }
 }

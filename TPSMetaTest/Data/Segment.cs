@@ -55,7 +55,7 @@ namespace TPSMetaTest.Data
         {
             this.Name = "Data segment";
             this.Length = 1;
-            this.Type = DataDefinition.SegType.ASCII;
+            this.Type = DataDefinition.SegType.Hex;
         }
 
         #region INotifyPropertyChanged メンバ
